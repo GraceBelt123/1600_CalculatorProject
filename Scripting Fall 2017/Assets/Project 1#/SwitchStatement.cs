@@ -5,37 +5,51 @@ using System.Collections.Generic;
 
 public class SwitchStatement : MonoBehaviour
 {
-    public Input numbers;
     Text gameWords;
 	public Text gameover;
-	Text won;
+	public Text youwon;
     //Switch for input numbers. 
     //ElseClause for to display YOU WON!!! or Game Over!!!
     //Perhaps, create ClickButton for numbers in another script. Maybe, including arrays and stuff things like that. 
 	void Start(){
 		gameover.enabled = false;
 	}
-//    public void Switch (int numbers)
-//    {
-//        switch (numbers)
-//        {
-//				case 1:				
-//            
-//                              
-//       }
-//    } 
 //    public void ElseClause ()
 //    {
 //            
 //    }
 
     void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == "FallingNum")
-        {
+	{
+		if (col.gameObject.tag == "FallingNum")
+		{
 			print ("Collided");
 			gameover.enabled = true;
-        }
-    }
+		}
+
+		if (col.gameObject.tag == "UpNum")
+		{
+			print ("Correct");
+			youwon.enabled = true;
+		}
+	}
 }
+//	void Switch (int numbers){
+
+//		switch (numbers)
+//		{
+//		case 1:
+//			numbers = 
+//		case 2:
+//		case 3:
+//		default: 
+//	}
+//}
+
+//		public void ButtonClick (){
+
+//		foreach (Text numbers in characters){
+//		print (numbers);
+//		}
+// }
 
