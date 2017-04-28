@@ -47,7 +47,9 @@
   <ItemGroup>
      <Compile Include="Assets\2Vending Review\BendingButton.cs" />
      <Compile Include="Assets\2Vending Review\MoneyInputs.cs" />
+     <Compile Include="Assets\NumberGenerator.cs" />
      <Compile Include="Assets\Project 1#\Buttons.cs" />
+     <Compile Include="Assets\Project 1#\StaticVars.cs" />
      <Compile Include="Assets\Project 1#\SwitchStatement.cs" />
      <Compile Include="Assets\Vending Review\Access.cs" />
      <Compile Include="Assets\Vending Review\Button.cs" />
