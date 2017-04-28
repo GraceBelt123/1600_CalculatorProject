@@ -8,6 +8,7 @@ public class SwitchStatement : MonoBehaviour
     Text gameWords;
 	public Text gameover;
 	public Text youwon;
+	int correctAnswersNeeded = 20;
     //Switch for input numbers. 
     //ElseClause for to display YOU WON!!! or Game Over!!!
     //Perhaps, create ClickButton for numbers in another script. Maybe, including arrays and stuff things like that. 
@@ -19,7 +20,7 @@ public class SwitchStatement : MonoBehaviour
 //            
 //    }
 
-    void OnTriggerEnter(Collider col)
+    void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.tag == "FallingNum")
 		{
@@ -27,11 +28,11 @@ public class SwitchStatement : MonoBehaviour
 			gameover.enabled = true;
 		}
 
-		if (col.gameObject.tag == "UpNum")
-		{
-			print ("Correct");
-			youwon.enabled = true;
-		}
+//		if (col.gameObject.tag == "UpNum")
+//		{
+//			print ("Correct");
+//			youwon.enabled = true;
+//		}
 	}
 }
 //	void Switch (int numbers){
